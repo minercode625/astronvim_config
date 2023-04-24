@@ -10,6 +10,7 @@ return {
     -- mappings seen under group name "Buffer"
     [":"] = { "<cmd>FineCmdline<CR>" },
     ["<leader>tl"] = { ":set wrap linebreak<cr>" },
+    ["<leader>tc"] = { ":!code .<cr><cr>" },
     ["/"] = { "<Plug>(easymotion-sn)" },
     ["n"] = { "<Plug>(easymotion-next)" },
     ["N"] = { "<Plug>(easymotion-prev)" },
@@ -32,4 +33,5 @@ return {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
   },
+  i = {},
 }
