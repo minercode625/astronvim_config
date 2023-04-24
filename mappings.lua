@@ -8,10 +8,17 @@ return {
   n = {
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
+    [":"] = { "<cmd>FineCmdline<CR>" },
+    ["<leader>tl"] = { ":set wrap linebreak<cr>" },
+    ["/"] = { "<Plug>(easymotion-sn)" },
+    ["n"] = { "<Plug>(easymotion-next)" },
+    ["N"] = { "<Plug>(easymotion-prev)" },
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
       function()
-        require("astronvim.utils.status").heirline.buffer_picker(function(bufnr) require("astronvim.utils.buffer").close(bufnr) end)
+        require("astronvim.utils.status").heirline.buffer_picker(
+          function(bufnr) require("astronvim.utils.buffer").close(bufnr) end
+        )
       end,
       desc = "Pick to close",
     },
