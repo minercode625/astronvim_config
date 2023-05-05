@@ -9,7 +9,6 @@ return {
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
     [":"] = { "<cmd>FineCmdline<CR>" },
-    ["<leader>tl"] = { ":set wrap linebreak<cr>" },
     ["<leader>tc"] = { ":!code .<cr><cr>" },
     ["/"] = { "<Plug>(easymotion-sn)" },
     ["n"] = { "<Plug>(easymotion-next)" },
