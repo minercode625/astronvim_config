@@ -51,6 +51,11 @@ return {
     event = "User AstroFile",
   },
   {
+    "lewis6991/spellsitter.nvim",
+    config = function() require("spellsitter").setup() end,
+    event = "User AstroFile",
+  },
+  {
     "karb94/neoscroll.nvim",
     config = function() require("neoscroll").setup() end,
   },
@@ -66,7 +71,17 @@ return {
     ft = { "markdown" },
   },
   {
-    "nvim-tree/nvim-web-devicons",
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup {
+        -- Configuration here, or leave empty to use defaults
+      }
+    end,
+  },
+  {
+    "chrisgrieser/nvim-spider",
     event = "VeryLazy",
   },
 }

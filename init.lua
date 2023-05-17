@@ -66,7 +66,7 @@ return {
   polish = function()
     vim.api.nvim_create_autocmd("BufRead", {
       pattern = "*.tex",
-      command = "set wrap linebreak",
+      command = "set wrap linebreak noautoindent",
     })
 
     -- Set up custom filetypes
