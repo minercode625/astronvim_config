@@ -4,6 +4,10 @@ return {
     event = "VeryLazy",
   },
   {
+    "wakatime/vim-wakatime",
+    event = "VeryLazy",
+  },
+  {
     "mbbill/undotree",
     event = "User AstroFile",
   },
