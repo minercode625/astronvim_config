@@ -69,6 +69,10 @@ return {
       command = "set wrap linebreak noautoindent",
     })
 
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = { "python", "lua" }, -- disable spellchecking for these filetypes
+      command = "setlocal nospell",
+    })
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
