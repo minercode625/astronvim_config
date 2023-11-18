@@ -3,5 +3,15 @@ return {
   event = "BufRead",
   -- dependencies = "nvim-lua/plenary.nvim",
   cmd = { "RunCode", "RunFile", "RunProject", "RunClose" },
-  config = function() require "user.plugins.configs.coderunner" end,
+  config = function()
+    require("code_runner").setup {
+      filetype = {
+        cpp = {
+          "cd $dir &&",
+          "g++ *.cpp -o $fileNameWithoutExt &&",
+          "./$fileNameWithoutExt &&",
+        },
+      },
+    }
+  end,
 }
