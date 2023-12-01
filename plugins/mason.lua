@@ -23,6 +23,34 @@ return {
       handlers = {
         python = function(source_name)
           local dap = require "dap"
+
+          -- dap.adapters.codelldb = {
+          --   type = "executable",
+          --   command = "/Users/wd_seo/.local/share/nvim/mason/bin/codelldb",
+          --   name = "lldb",
+          --   host = "127.0.0.1",
+          --   port = 13000,
+          -- }
+          dap.adapters.cpp = {
+            type = "executable",
+            name = "codelldb", -- Updated name to match the adapter definition
+            command = "/Users/wd_seo/.local/share/nvim/mason/bin/codelldb",
+          }
+
+          -- C++ Configuration
+          dap.configurations.cpp = {
+            {
+              name = "Launch",
+              type = "codelldb", -- Updated to use the correct adapter name
+              request = "launch",
+              program = "${file}",
+              cwd = "${workspaceFolder}",
+              stopOnEntry = false,
+              args = {},
+              runInTerminal = true,
+            },
+          }
+
           dap.adapters.python = {
             type = "executable",
             command = "/opt/homebrew/bin/python3",
@@ -43,6 +71,6 @@ return {
         end,
       },
     },
-    event = "VeryLazy",
+    event = "BufRead",
   },
 }
