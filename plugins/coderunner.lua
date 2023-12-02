@@ -8,8 +8,8 @@ return {
       filetype = {
         cpp = {
           "cd $dir &&",
-          "g++ *.cpp -o $fileNameWithoutExt &&",
-          "./$fileNameWithoutExt &&",
+          "clang++ -g -arch arm64 *.cpp -o $fileNameWithoutExt &&",
+          "./$fileNameWithoutExt",
         },
       },
     }

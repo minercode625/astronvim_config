@@ -40,7 +40,7 @@ return {
           -- C++ Configuration
           dap.configurations.cpp = {
             {
-              name = "Launch",
+              name = "LCPP",
               type = "codelldb", -- Updated to use the correct adapter name
               request = "launch",
               program = "${file}",
