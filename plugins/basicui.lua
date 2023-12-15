@@ -27,4 +27,14 @@ return {
     "folke/tokyonight.nvim",
     event = "VeryLazy",
   },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    opts = {},
+    event = "BufRead",
+  },
+  {
+    "HiPhish/rainbow-delimiters.nvim",
+    event = "BufRead",
+  },
 }
