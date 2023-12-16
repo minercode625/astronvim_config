@@ -37,4 +37,10 @@ return {
     "HiPhish/rainbow-delimiters.nvim",
     event = "BufRead",
   },
+  {
+    "akinsho/bufferline.nvim",
+    version = "*",
+    dependencies = "nvim-tree/nvim-web-devicons",
+    event = "VeryLazy",
+  },
 }
