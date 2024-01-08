@@ -65,7 +65,7 @@ return {
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
     vim.api.nvim_create_autocmd("BufRead", {
-      pattern = { "*.tex", "*.norg" },
+      pattern = { "*.tex", "*.norg", "*.txt" },
       command = "set wrap linebreak noautoindent",
     })
 
