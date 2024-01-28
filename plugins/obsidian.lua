@@ -1,3 +1,5 @@
+local globals = require "user.config"
+
 return {
   "epwalsh/obsidian.nvim",
   version = "*", -- recommended, use latest release instead of latest commit
@@ -20,7 +22,7 @@ return {
     workspaces = {
       {
         name = "root",
-        path = "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/WD_SEO",
+        path = globals.obsidian.path,
       },
     },
     -- see below for full list of options 👇

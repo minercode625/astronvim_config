@@ -1,3 +1,4 @@
+local globals = require "user.config"
 -- customize mason plugins
 return {
   -- use mason-lspconfig to configure LSP installations
@@ -34,7 +35,7 @@ return {
           dap.adapters.cpp = {
             type = "executable",
             name = "codelldb", -- Updated name to match the adapter definition
-            command = "/Users/wd_seo/.local/share/nvim/mason/bin/codelldb",
+            command = globals.dap.cpp.adapter.command,
           }
 
           -- C++ Configuration
@@ -53,7 +54,7 @@ return {
 
           dap.adapters.python = {
             type = "executable",
-            command = "/opt/homebrew/bin/python3",
+            command = globals.dap.python.adapter.command,
             args = {
               "-m",
               "debugpy.adapter",
