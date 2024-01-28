@@ -2,6 +2,7 @@ local M = {}
 
 M.obsidian = {
   path = "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/WD_SEO",
+  template_dir = "templates",
 }
 
 M.dap = {

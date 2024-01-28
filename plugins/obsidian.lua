@@ -26,6 +26,11 @@ return {
       },
     },
     -- see below for full list of options 👇
+    templates = {
+      subdir = globals.obsidian.template_dir,
+      date_format = "%Y-%m-%d",
+      time_format = "%H:%M",
+    },
   },
   event = "VeryLazy",
 }
