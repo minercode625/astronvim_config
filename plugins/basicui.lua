@@ -48,4 +48,8 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     event = "BufRead",
   },
+  {
+    "sindrets/diffview.nvim",
+    event = "BufRead",
+  },
 }

@@ -40,7 +40,7 @@ return {
         -- disable lua_ls formatting capability if you want to use StyLua to format your lua code
         -- "lua_ls",
       },
-      timeout_ms = 1000, -- default format timeout
+      timeout_ms = 2000, -- default format timeout
       -- filter = function(client) -- fully override the default formatting function
       --   return true
       -- end
@@ -94,6 +94,14 @@ return {
         "--offset-encoding=UTF-16",
       },
     }
+    require("lspconfig").grammarly.setup {
+      on_attach = on_attach,
+      init_options = {
+        clientId = "client_BaDkMgx4X19X9UxxYRCXZo",
+      },
+      filetypes = { "markdown", "tex" },
+    }
+
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
