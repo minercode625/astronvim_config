@@ -1,10 +1,10 @@
 return {
-  {
-    "echasnovski/mini.animate",
-    config = function() require("mini.animate").setup() end,
-    version = "*",
-    event = "VeryLazy",
-  },
+  -- {
+  --   "echasnovski/mini.animate",
+  --   config = function() require("mini.animate").setup() end,
+  --   version = "*",
+  --   event = "VeryLazy",
+  -- },
   {
     "easymotion/vim-easymotion",
     event = "VeryLazy",
